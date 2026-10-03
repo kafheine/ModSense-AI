@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Analytics - ModSense</title>
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/admin.js" defer></script>
+</head>
+<body>
+<div class="admin-layout">
+<aside class="sidebar">
+    <div class="logo">Mod<span>Sense</span></div>
+    <ul class="sidebar-menu"><li><a href="admin-dashboard.html" class="">Dashboard</a></li><li><a href="user-management.html" class="">User Management</a></li><li><a href="community-management.html" class="">Community Management</a></li><li><a href="content-moderation.html" class="">Content Moderation</a></li><li><a href="analytics.html" class="active">Admin Analytics</a></li></ul>
+    <div class="logout-container">
+        <a href="../auth/login.html" class="logout-btn">Logout</a>
+    </div>
+</aside>
+<main class="main-content">
+<header class="topbar">
+    <h1>Admin Analytics</h1>
+    <div class="admin-profile">
+        <div class="profile-circle">A</div>
+        <span class="logged-user-name">Admin</span>
+    </div>
+</header>
+<section class="page">
+    <div class="stats-grid">
+        <div class="stat-card"><h3>Total Users</h3><div id="analyticsTotalUsers" class="stat-number">0</div></div>
+        <div class="stat-card"><h3>Active Users</h3><div id="analyticsActiveUsers" class="stat-number">0</div></div>
+        <div class="stat-card"><h3>Inactive Users</h3><div id="analyticsInactiveUsers" class="stat-number">0</div></div>
+        <div class="stat-card"><h3>Total Communities</h3><div id="analyticsTotalCommunities" class="stat-number">0</div></div>
+        <div class="stat-card"><h3>Active Communities</h3><div id="analyticsActiveCommunities" class="stat-number">0</div></div>
+        <div class="stat-card"><h3>Inactive Communities</h3><div id="analyticsInactiveCommunities" class="stat-number">0</div></div>
+        <div class="stat-card"><h3>Total Posts</h3><div id="analyticsTotalPosts" class="stat-number">0</div></div>
+        <div class="stat-card"><h3>Pending Moderation</h3><div id="analyticsPendingModeration" class="stat-number">0</div></div>
+    </div>
+
+    <div class="two-column">
+        <div class="card">
+            <h3>Engagement</h3>
+            <p>Total Comments: <strong id="analyticsTotalComments">0</strong></p>
+            <p>Total Likes: <strong id="analyticsTotalLikes">0</strong></p>
+        </div>
+        <div class="card">
+            <h3>AI Moderation</h3>
+            <p>Pending records represent posts waiting for administrator review.</p>
+            <a class="btn btn-danger" href="content-moderation.html">Review Moderation</a>
+        </div>
+    </div>
+    </section>
+</main>
+</div>
+</body>
+</html>

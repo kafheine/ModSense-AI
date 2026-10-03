@@ -1,0 +1,8 @@
+Flask
+Flask-Cors
+mysql-connector-python
+mysql-connector-python-rf
+cryptography
+requests
+Groq
+python-dotenv

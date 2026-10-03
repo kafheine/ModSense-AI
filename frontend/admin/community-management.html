@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Management - ModSense</title>
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/admin.js" defer></script>
+</head>
+<body>
+<div class="admin-layout">
+<aside class="sidebar">
+    <div class="logo">Mod<span>Sense</span></div>
+    <ul class="sidebar-menu"><li><a href="admin-dashboard.html" class="">Dashboard</a></li><li><a href="user-management.html" class="">User Management</a></li><li><a href="community-management.html" class="active">Community Management</a></li><li><a href="content-moderation.html" class="">Content Moderation</a></li><li><a href="analytics.html" class="">Admin Analytics</a></li></ul>
+    <div class="logout-container">
+        <a href="../auth/login.html" class="logout-btn">Logout</a>
+    </div>
+</aside>
+<main class="main-content">
+<header class="topbar">
+    <h1>Community Management</h1>
+    <div class="admin-profile">
+        <div class="profile-circle">A</div>
+        <span class="logged-user-name">Admin</span>
+    </div>
+</header>
+<section class="page">
+    <div class="page-heading">
+        <h2>Manage Communities</h2>
+        <p>View community activity and change active status.</p>
+    </div>
+    <div class="table-wrapper">
+        <table>
+            <thead><tr>
+                <th>ID</th><th>Name</th><th>Category</th><th>Members</th><th>Posts</th><th>Status</th><th>Action</th>
+            </tr></thead>
+            <tbody id="communityTableBody"><tr><td colspan="7">Loading...</td></tr></tbody>
+        </table>
+    </div>
+    </section>
+</main>
+</div>
+</body>
+</html>

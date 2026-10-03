@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Moderation - ModSense</title>
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/admin.js" defer></script>
+</head>
+<body>
+<div class="admin-layout">
+<aside class="sidebar">
+    <div class="logo">Mod<span>Sense</span></div>
+    <ul class="sidebar-menu"><li><a href="admin-dashboard.html" class="">Dashboard</a></li><li><a href="user-management.html" class="">User Management</a></li><li><a href="community-management.html" class="">Community Management</a></li><li><a href="content-moderation.html" class="active">Content Moderation</a></li><li><a href="analytics.html" class="">Admin Analytics</a></li></ul>
+    <div class="logout-container">
+        <a href="../auth/login.html" class="logout-btn">Logout</a>
+    </div>
+</aside>
+<main class="main-content">
+<header class="topbar">
+    <h1>AI Content Moderation</h1>
+    <div class="admin-profile">
+        <div class="profile-circle">A</div>
+        <span class="logged-user-name">Admin</span>
+    </div>
+</header>
+<section class="page">
+    <div class="page-heading">
+        <h2>AI Content Moderation</h2>
+        <p>AI analyzes post content and provides a reason, risk level and score. Admin can then approve or remove the content.</p>
+    </div>
+
+    <div class="card">
+        <h3>AI Moderation Task</h3>
+        <p>
+            Each newly created post is automatically analyzed by the backend AI moderation task.
+            Use <strong>AI Analyze</strong> to run the analysis again.
+        </p>
+        <p class="muted">
+            Groq AI analyzes each post and provides the moderation reason, risk level and AI score.
+            Admins can re-run the AI analysis when required.
+        </p>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Post</th>
+                    <th>Author</th>
+                    <th>AI Reason</th>
+                    <th>Risk</th>
+                    <th>Score</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="moderationTableBody">
+                <tr><td colspan="8">Loading moderation data...</td></tr>
+            </tbody>
+        </table>
+    </div>
+    </section>
+</main>
+</div>
+</body>
+</html>

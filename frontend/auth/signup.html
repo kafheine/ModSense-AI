@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - ModSense</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/auth.js" defer></script>
+</head>
+<body class="auth-page">
+<div class="auth-card">
+    <div class="logo">Mod<span>Sense</span></div>
+    <h1>Create Account</h1>
+
+    <form id="signupForm">
+        <div class="form-group">
+            <label>First Name</label>
+            <input id="firstName" required>
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input id="lastName" required>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input id="email" type="email" required>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input id="password" type="password" minlength="6" required>
+        </div>
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input id="confirmPassword" type="password" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Create Account</button>
+        <p id="formMessage" class="error"></p>
+    </form>
+
+    <p>Already registered? <a href="login.html" class="auth-link">Login</a></p>
+</div>
+</body>
+</html>

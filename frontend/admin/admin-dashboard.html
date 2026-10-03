@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard - ModSense</title>
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/admin.js" defer></script>
+</head>
+<body>
+<div class="admin-layout">
+<aside class="sidebar">
+    <div class="logo">Mod<span>Sense</span></div>
+    <ul class="sidebar-menu"><li><a href="admin-dashboard.html" class="active">Dashboard</a></li><li><a href="user-management.html" class="">User Management</a></li><li><a href="community-management.html" class="">Community Management</a></li><li><a href="content-moderation.html" class="">Content Moderation</a></li><li><a href="analytics.html" class="">Admin Analytics</a></li></ul>
+    <div class="logout-container">
+        <a href="../auth/login.html" class="logout-btn">Logout</a>
+    </div>
+</aside>
+<main class="main-content">
+<header class="topbar">
+    <h1>Admin Dashboard</h1>
+    <div class="admin-profile">
+        <div class="profile-circle">A</div>
+        <span class="logged-user-name">Admin</span>
+    </div>
+</header>
+<section class="page">
+    <div class="page-heading">
+        <h2>Platform Overview</h2>
+        <p>Monitor users, communities, posts and AI moderation.</p>
+    </div>
+    <div class="stats-grid">
+        <div class="stat-card"><h3>Total Users</h3><div id="totalUsers" class="stat-number">0</div></div>
+        <div class="stat-card"><h3>Total Communities</h3><div id="totalCommunities" class="stat-number">0</div></div>
+        <div class="stat-card"><h3>Total Posts</h3><div id="totalPosts" class="stat-number">0</div></div>
+        <div class="stat-card"><h3>Pending AI Moderation</h3><div id="flaggedContent" class="stat-number">0</div></div>
+    </div>
+    <div class="card">
+        <h3>AI Features</h3>
+        <p>New posts are analyzed automatically, and administrators can re-run AI analysis from Content Moderation.</p>
+        <a class="btn btn-danger" href="content-moderation.html">Open Content Moderation</a>
+        <a class="btn btn-secondary" href="analytics.html">View Analytics</a>
+    </div>
+    </section>
+</main>
+</div>
+</body>
+</html>

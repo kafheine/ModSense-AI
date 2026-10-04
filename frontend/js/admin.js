@@ -189,9 +189,9 @@ async function loadModeration() {
 
         const data = await apiRequest(`/api/admin/moderation?user_id=${admin.user_id}`);
 
-        body.innerHTML = data.moderation.map(item => `
+        body.innerHTML = data.moderation.map((item, index) => `
             <tr>
-                <td>${item.moderation_id}</td>
+                <td>${data.moderation.length - index}</td>
                 <td>${escapeHtml(item.title)}</td>
                 <td>${escapeHtml(item.author_name)}</td>
                 <td>${escapeHtml(item.flag_reason)}</td>

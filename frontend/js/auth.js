@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://127.0.0.1:5000";
+const API_BASE_URL = "https://modsense-ai-1.onrender.com";
 
 async function authRequest(path, body) {
     const response = await fetch(`${API_BASE_URL}${path}`, {

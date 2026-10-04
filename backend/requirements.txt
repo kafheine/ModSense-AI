@@ -6,3 +6,4 @@ cryptography
 requests
 Groq
 python-dotenv
+gunicorn

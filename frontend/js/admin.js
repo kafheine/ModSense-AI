@@ -94,19 +94,19 @@ async function loadUsers() {
 
         const data = await apiRequest(`/api/admin/users?user_id=${admin.user_id}`);
 
-        body.innerHTML = data.users.map(user => `
-            <tr>
-                <td>${user.user_id}</td>
-                <td>${escapeHtml(user.first_name)} ${escapeHtml(user.last_name)}</td>
-                <td>${escapeHtml(user.email)}</td>
-                <td>${escapeHtml(user.role)}</td>
-                <td>${escapeHtml(user.status)}</td>
-                <td>
-                    <button class="btn btn-small" onclick="changeUserStatus(${user.user_id}, '${user.status === "active" ? "inactive" : "active"}')">
-                        ${user.status === "active" ? "Deactivate" : "Activate"}
-                    </button>
-                </td>
-            </tr>
+        body.innerHTML = data.users.map((user, index) => `
+        <tr>
+        <td>${data.users.length - index}</td>
+        <td>${escapeHtml(user.first_name)} ${escapeHtml(user.last_name)}</td>
+        <td>${escapeHtml(user.email)}</td>
+        <td>${escapeHtml(user.role)}</td>
+        <td>${escapeHtml(user.status)}</td>
+        <td>
+            <button class="btn btn-small" onclick="changeUserStatus(${user.user_id}, '${user.status === "active" ? "inactive" : "active"}')">
+                ${user.status === "active" ? "Deactivate" : "Activate"}
+            </button>
+        </td>
+        </tr>
         `).join("");
     } catch (error) {
         body.innerHTML = `<tr><td colspan="6">${escapeHtml(error.message)}</td></tr>`;
